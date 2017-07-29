@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pizza Preferences</title>
+  </head>
+  <body>
+    <form action="success.html" method="post">
+      <div>
+        <label>Email:</label>
+        <input type="email" name="email">
+      </div>
+      <div>
+        <label>Password:</label>
+        <input type="password" name="password">
+      </div>
+      <div>
+        <label>Pizza Preferences</label>
+        <select name="Pizza">
+          <option value="Hawaiian">Hawaiian</option>
+          <option value="Pepperoni">Pepperoni</option>
+          <option value="Mission-Special">Mission-Special</option>
+        </select>
+      </div>
+      <div>
+        <label>Other preferences and delivery instructions</label><br>
+        <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
+      </div>
+      <div>
+        <input type="checkbox" name="delivery-agree" value="agree">
+        "Do you want your pizza delivered?"
+      </div>
+      <button type="submit">Submit Preferences</button>
+    </form>
+  </body>
+</html>
