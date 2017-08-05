@@ -46,12 +46,23 @@ body {
 }
 
 #main {
-  width: 756px;
+  width: 75%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 490px) {
+  #external-links {
+    color: red;
+  }
+}
+
+@media screen and (max-width: 450px) {
   body {
     background-color: hotpink;
   }
 }
 
+@media screen and (min-width: 300px) {
+  figcaption {
+    display: none;
+  }
+}
