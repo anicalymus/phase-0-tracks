@@ -1,4 +1,5 @@
-#encrypt abc
+# encryt abc
+
 def encrypt_method(string)
   
   index = 0
@@ -6,12 +7,12 @@ def encrypt_method(string)
     string[index] = string[index].next
     index +=1
   end
-
-  puts string
+   puts string
+   string
 
 end
 
-encrypt_method(encrypted_word)
+
 
 #decrypt bcd
 
@@ -26,5 +27,15 @@ while index < string.length
   string[index] = new_letter
   index +=1
   end
-  puts string
+ puts string
+ string
 end
+  
+encrypt_method("abc")
+encrypt_method("zed")
+decrypt_method("bcd")
+decrypt_method("afe")
+
+decrypt_method(encrypt_method("swordfish"))
+
+#"zed" should've returned "afe", but instead returned "abfe". This happened because of the edge case and retured "aa" instead of "a".
