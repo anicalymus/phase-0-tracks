@@ -9,5 +9,19 @@ wants_garlic_bread = gets.chomp
 puts "Would you like to enroll in the company's health insurance? (y/n)"
 wants_health_insurance = gets.chomp
 
+correct_age = birth_year + age
+current_year = 2017
+
+  if
+  correct_age == current_year && (wants_garlic_bread == yes || wants_health_insurance == yes)
+  puts "Probably not a vampire."
+  if
+  correct_age != current_year && (wants_garlic_bread == no || wants_health_insurance == no)
+  puts "Probably a vampire."
+  
+  end
+
+end
+
 
 
