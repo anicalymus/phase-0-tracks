@@ -33,7 +33,12 @@ def processed_employees
     elsif wants_health_insurance == "n"
       wants_health_insurance = false
     end
-
+    
+    puts "List any known allergies one-by-one. Type 'done' when finished."
+    allergies = gets.chomp
+    
+    puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+    
     correct_age = birth_year += age
     current_year = 2017
     current_year = current_year.to_i
