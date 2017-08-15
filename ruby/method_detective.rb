@@ -22,13 +22,14 @@
  "Stop! You’re under arrest!".casecmp?("STOP! YOU’RE UNDER ARREST!")
  => true
 
- "the usual".<???>
+ a = "the usual " 
+ a << "suspects"
 => "the usual suspects"
 
- " suspects".<???>
+ " suspects".insert(0, "the usual")
  => "the usual suspects"
 
- "The case of the disappearing last letter".<???>
+ "The case of the disappearing last letter".delete 
  => "The case of the disappearing last lette"
 
  "The mystery of the missing first letter".<???>
