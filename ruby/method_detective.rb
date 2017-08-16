@@ -4,43 +4,40 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
- "iNvEsTiGaTiOn".casecmp(“InVeStIgAtIoN”)
- => 0
+ "iNvEsTiGaTiOn".swapcase
+ => “InVeStIgAtIoN”
 
- "iNvEsTiGaTiOn".casecmp?(“InVeStIgAtIoN”)
- => false
-
- "zom".insert(1, "o")
+  "zom".insert(1, "o")
  => “zoom”
 
- "enhance".center(20)
+ "enhance".center(15)
  => "    enhance    "
 
- "Stop! You’re under arrest!".casecmp("STOP! YOU’RE UNDER ARREST!")
- => 0
-
- "Stop! You’re under arrest!".casecmp?("STOP! YOU’RE UNDER ARREST!")
- => true
+ "Stop! You’re under arrest!".upcase
+ => "STOP! YOU’RE UNDER ARREST!"
 
  a = "the usual " 
  a << "suspects"
 => "the usual suspects"
 
+"the usual".insert(9, " suspects")
+=> "the usual suspects"
+
  " suspects".insert(0, "the usual")
  => "the usual suspects"
 
- "The case of the disappearing last letter".delete 
+ "The case of the disappearing last letter".chop
  => "The case of the disappearing last lette"
 
- "The mystery of the missing first letter".<???>
+ "The mystery of the missing first letter"[1..-1]
  => "he mystery of the missing first letter"
 
- "Elementary,    my   dear        Watson!".<???>
+ "Elementary,    my   dear        Watson!".split.join(" ")
  => "Elementary, my dear Watson!"
 
- "z".<???>
+ "z".ord
  => 122 
  (What is the significance of the number 122 in relation to the character z?)
 
- "How many times does the letter 'a' appear in this string?".<???>
+ "How many times does the letter 'a' appear in this string?".count("a")
  => 4
