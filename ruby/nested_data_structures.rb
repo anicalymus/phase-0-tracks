@@ -2,7 +2,7 @@ clothing_store = {
 	shoe_dept: {
 			dept_name: 'Shoe Department',
 			shoe_info: {
-					different_sizes: "5-12"
+					different_sizes: "5-12", "half sizes"
 					shoe_sections: {"men", "women", "kids"},
 			shoe_type: [
 					"running", 
@@ -15,7 +15,7 @@ clothing_store = {
 			dept_name: 'Womens Department',
 			clothes_info: {
 					different_sizes: "x-small", "small", "medium", "large", "x-large", "xx-large"
-					women_sections: {"juniors", "petite", "women", "plus size"}
+					women_sections: {"juniors", "petite", "women", "plus size"},
 			womens_clothes: [
 					"pants",
 					"dress pants",
@@ -31,7 +31,7 @@ clothing_store = {
 			dept_name: 'Mens Department',
 			clothes_info: {
 				different_sizes: "x-small", "small", "medium", "large", "x-large", "xx-large"
-				mens_sections: {"big", "tall", "young men", "men"}
+				mens_sections: {"big", "tall", "young men", "men"},
 			mens_clothes: [
 					"pants",
 					"slacks",
@@ -40,10 +40,26 @@ clothing_store = {
 					"shirts",
 					"sweaters"
 					"jackets"
-				]
-			  },
-
-	}			
-	}
+					]
+			  	},
+  childrens_dept: {
+  	dept_name: 'Childrens Department',
+  	clothes_info: {
+  		different_sizes: "baby", "toddler", "kid"
+  		childrens_sections: {"baby", "toddler", "kid"},
+  	childrens_clothes: [
+  				"onezies",
+  				"pants",
+  				"shorts",
+  				"shirts",
+  				"tutus",
+  				"dresses",
+  				"sweaters",
+  				"jackets"
+					]
+  				}
+  			}
+			}			
+		}
 	}
 }
