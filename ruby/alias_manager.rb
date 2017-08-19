@@ -1,4 +1,4 @@
-
+#Release 0: Attempt a Tricky Algorithm
 #Taking a name and swapping the first and last name to create a fake name.
 
 puts "What is your first name?"
@@ -49,4 +49,35 @@ p "Your spy name is #{final_spy_name}!"
 end
 
 consonant_changer(vowel_changer(spy_name))
+
+#Release 1: Provide a User Interface
+#Creating a loop for a user to enter multiple names to get fake names in return
+
+loop do
+	puts "Would you like another spy name? If not type 'exit'."
+	another_spy_name = gets.chomp
+	if another_spy_name == "yes"
+		puts "What is the first name?"
+		fake_name_first = gets.chomp
+		puts "What is the last name?"
+		fake_name_last = gets.chomp
+		consonant_changer(vowel_changer(fake_name_first + " " +fake_name_last))
+	elsif another_spy_name =="exit"
+		p "Thank you for using this program!"
+		break
+	else
+		p "Please write another name."
+	end
+end
+
+#Release 2: Store the Aliases
+#Using a data structure to store the fake names as entered.
+
+#spy_name_info = {
+#	name: spy_name,
+#	name1: another_spy_name
+#}		
+
+
+
 				
