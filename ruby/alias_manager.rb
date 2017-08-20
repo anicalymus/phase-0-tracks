@@ -51,16 +51,20 @@ end
 consonant_changer(vowel_changer(spy_name))
 
 #Release 1: Provide a User Interface
-#Creating a loop for a user to enter multiple names to get fake names in return
+
+spy_names = {}
+another_spy_name = ""
+#fake_name_first = ""
+#fake_name_last = ""
 
 loop do
 	puts "Would you like another spy name? If not type 'exit'."
 	another_spy_name = gets.chomp
 	if another_spy_name == "yes"
 		puts "What is the first name?"
-		fake_name_first = gets.chomp
+		fake_name_first = gets.chomp.capitalize
 		puts "What is the last name?"
-		fake_name_last = gets.chomp
+		fake_name_last = gets.chomp.capitalize
 		consonant_changer(vowel_changer(fake_name_first + " " +fake_name_last))
 	elsif another_spy_name =="exit"
 		p "Thank you for using this program!"
@@ -70,13 +74,13 @@ loop do
 	end
 end
 
-#Release 2: Store the Aliases
-#Using a data structure to store the fake names as entered.
+#Release 2: Store the aliases
+  spy_names.each do |name, scramble|
+	puts "#{name} is also known as #{scramble}"
+end
 
-#spy_name_info = {
-#	name: spy_name,
-#	name1: another_spy_name
-#}		
+
+
 
 
 
