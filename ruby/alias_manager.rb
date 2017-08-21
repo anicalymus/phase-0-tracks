@@ -7,12 +7,13 @@ first_name = gets.chomp.capitalize
 puts "What is your last name?"
 last_name = gets.chomp.capitalize
 
-spy_name = last_name + " " + first_name
+real_name = last_name + " " + first_name
 
 
-p spy_name
+p real_name
 
 #Changing all of the vowels to the next vowel in 'aeiou'.
+spy_names = {}
 
 def vowel_changer(spy_name)
 	vowels = ['a', 'e', 'i', 'o', 'u']
@@ -46,13 +47,14 @@ def consonant_changer(spy_name_and_vowel)
 end
 final_spy_name = spy_name_and_vowel_and_consonant.join
 p "Your spy name is #{final_spy_name}!"
+final_spy_name
 end
 
-consonant_changer(vowel_changer(spy_name))
+spy_name = consonant_changer(vowel_changer(real_name))
+spy_names[real_name] = spy_name
 
 #Release 1: Provide a User Interface
 
-spy_names = {}
 another_spy_name = ""
 #fake_name_first = ""
 #fake_name_last = ""
@@ -65,7 +67,9 @@ loop do
 		fake_name_first = gets.chomp.capitalize
 		puts "What is the last name?"
 		fake_name_last = gets.chomp.capitalize
-		consonant_changer(vowel_changer(fake_name_first + " " +fake_name_last))
+		new_real_name = fake_name_first + " " +fake_name_last
+		new_spy_name = consonant_changer(vowel_changer(new_real_name))
+		spy_names[new_real_name] = new_spy_name
 	elsif another_spy_name =="exit"
 		p "Thank you for using this program!"
 		break
@@ -75,8 +79,8 @@ loop do
 end
 
 #Release 2: Store the aliases
-  spy_names.each do |name, scramble|
-	puts "#{name} is also known as #{scramble}"
+  spy_names.each do |name, nickname|
+	puts "#{name} is also known as #{nickname}"
 end
 
 
