@@ -1,52 +1,59 @@
 clothing_store = {
-	shoe_dept: {
+	shoe_dept: [
 			dept_name: 'Shoe Department',
-			shoe_info: {
-					different_sizes: "5-12", "half sizes"
-					shoe_sections: {"men", "women", "kids"},
+			shoe_info: [
+					different_sizes: ["5-12", "half sizes"]
+					shoe_sections: [
+					"men", 
+					"women", 
+					"kids"
+					]
+		],
 			shoe_type: [
 					"running", 
 					"sandals", 
 					"dressy", 
 					"casual"
 					]
-					},
-	womens_dept: {
-			dept_name: 'Womens Department',
-			clothes_info: {
-					different_sizes: "x-small", "small", "medium", "large", "x-large", "xx-large"
-					women_sections: {"juniors", "petite", "women", "plus size"},
+		],
+	womens_dept: [
+			dept_name: "Womens Department",
+			clothes_info: [
+					different_sizes: ["x-small", "small", "medium", "large", "x-large", "xx-large"]
+					women_sections: ["juniors", "petite", "women", "plus size"]
+		],
 			womens_clothes: [
 					"pants",
 					"dress pants",
 					"shorts",
 					"skirts",
 					"shirts",
-					"dresses"
+					"dresses",
 					"sweaters",
 					"jackets"
 				  ]
-					},
-	mens_dept: {
-			dept_name: 'Mens Department',
-			clothes_info: {
-				different_sizes: "x-small", "small", "medium", "large", "x-large", "xx-large"
-				mens_sections: {"big", "tall", "young men", "men"},
+		],
+	mens_dept: [
+			dept_name: "Mens Department",
+			clothes_info: [
+				different_sizes: ["x-small", "small", "medium", "large", "x-large", "xx-large"]
+				mens_sections: ["big", "tall", "young men", "men"],
 			mens_clothes: [
 					"pants",
 					"slacks",
-					"suits"
+					"suits",
 					"shorts",
 					"shirts",
-					"sweaters"
+					"sweaters",
 					"jackets"
 					]
-			  	},
-  childrens_dept: {
-  	dept_name: 'Childrens Department',
-  	clothes_info: {
-  		different_sizes: "baby", "toddler", "kid"
-  		childrens_sections: {"baby", "toddler", "kid"},
+		],
+  childrens_dept: [
+  	dept_name: "Childrens Department",
+  	clothes_info: [
+  		different_sizes: ["baby", "toddler", "kid"]
+  		childrens_sections: ["baby", "toddler", "kid"]
+  	],
   	childrens_clothes: [
   				"onezies",
   				"pants",
@@ -57,9 +64,8 @@ clothing_store = {
   				"sweaters",
   				"jackets"
 					]
-  				}
-  			}
-			}			
-		}
-	}
-}
+  	]
+  ]
+}			
+		
+	
