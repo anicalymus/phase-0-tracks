@@ -11,10 +11,10 @@ end
 test = "carrots apples cereal pizza"
 example_list = create_list(test)
 
-# input: string of items separated by spaces (example: "carrots apples cereal pizza")
+# input: string of items separated by spaces
 # steps: separate each item into their individual elements of an array using the .split method.
- 	# set default quantity (this will be the value)
-  # print the list to the console [can you use one of your other methods here?]
+# set default quantity (this will be the value)
+# print the list to the console [can you use one of your other methods here?]
 # output: the output will be a hash and the keys will be the type of items at a grocery store. The values will be the quanities of those items.
 
 # Method to add an item to a list
@@ -30,8 +30,13 @@ p add_item(example_list, "mangoes")
 
 # Method to remove an item from the list
 def remove_item(list, item_name)
-	list[item_name] = item
-	
+	{|list| list.delete("mangoes")}
+end
+	p remove_item(example_list)
+
+
+
+
 # input: list, item name
 # steps: name the list and the item that you would like delete.
 # output: an updated hash without the deleted item.
