@@ -1,0 +1,26 @@
+Showing a robot how to use an elevator
+
+-You are at the elevator. Wait until the elevator doors open.
+	-The elevator door is split into two halves, one door goes right and the other goes left.
+-Step into the elevator, turn around so that you are facing the door.
+-Once you are facing the door, on your right hand side, next to the closing doors, you will see some buttons 
+ with numbers on them.
+-Depending on what floor you need to go to you will press that number.
+	-Numbers look like this 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+-If you press the wrong number and it goes to that floor, don't get off.
+	-Stay on the elevator and press the correct floor number.
+-Otherwise you will press the correct number, once the doors open, walk out of the elevator and go to your destination.
+	-Depending on your destination you will walk straight ahead out of the elevator, or make a left or a right.
+
+__________________________________________________________	
+
+How to set an alarm to wake up in the morining and be on time for work.
+
+-You need to be at work by 8am and you live 30 minutes away, with traffic included.
+-If you cannot wake up the first time your alarm goes off, then set a snooze.
+		-You have the option to set your snooze for the amount of time you want ie: 5, 10, 15 minutes
+-Depending on how many times you anticipate to hit snooze, you are going to set your alarm accordingly so that you will still be on time for work.
+-You need 1 hour to get ready and you need to leave by 730a to be on time.
+		- The latest you can wake up is at 630a
+-If you can wake up at 630a without snoozing, then set your alarm for 630a and get up immediately.
+-Otherwise you can set your alarm for 550a-6a and snooze in incruments of 5-15 minutes until 630a and you can still be ontime.
