@@ -16,13 +16,13 @@ attr_reader :number_of_deaths
     @state = state_of_origin
     @population = population
     @population_density = population_density
-    @number_of_deaths
+    #@number_of_deaths
   end
 #Summarizes the result of the predicted deaths and speed of spread methods, printing a message that gives the totals of both based on population density, state, etc.
   def virus_effects
     predicted_deaths
     speed_of_spread
-    print "#{@state} will lose #{@ number_of_deaths} people in this   outbreak and will spread across the state in #{speed} months.\n\n"
+    print "#{@state} will lose #{@ number_of_deaths} people in this outbreak and will spread across the state in #{speed} months.\n\n"
   end
 #Uses population density and population of a state to figure out the predicted deaths if there were an outbreak
   def predicted_deaths
@@ -80,3 +80,12 @@ alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density],
 alaska.virus_effects
 #=======================================================================
 # Reflection Section
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# ----The differences between the two different hash syntaxes is that one is a hash rocket and the other is a symbol. They do the same thing but
+#     the symbol makes the code more readable.
+# What does require_relative do? How is it different from require?
+#-----Relative require copies and paste the other file that you are using into the current file that you are in so that it can use the data from
+#     from that file. Require is used to access built-in ruby modules.
+# What are some ways to iterate through a hash?
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# What concept did you most solidify in this challenge?
