@@ -10,5 +10,15 @@ function reverseString(str) {
 // Returning the array that was joined together. This is the string reversed.
   return joinArray;
 }
+ 
+
+// DRIVER CODE
 // Printing the the original string but reversed.
 console.log(reverseString("outside"));
+
+// Add driver code that prints the variable if some condition is true.
+if (8 == 08) {
+	console.log(reverseString("outside"));
+}
+
+
