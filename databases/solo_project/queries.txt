@@ -44,3 +44,31 @@ DELETE FROM stores WHERE stores.store_type="belts";
 
 RELEASE 3:
 	TRY A FEW DIFFERENT JOINS
+
+SELECT stores.name, malls.name FROM stores JOIN malls ON stores.mall_id = malls.id;
+H&M|Bay St.
+Footlocker|Union Square
+Claires|Stoneridge
+Macys|Union Square
+
+SELECT malls.name, malls.location, stores.store_type, stores.card_only FROM malls JOIN stores ON stores.mall_id = malls.id;
+Bay St.|Emeryville|clothing|false
+Union Square|San Francisco|shoes|true
+Stoneridge|Pleasanton|accessories|true
+Union Square|San Francisco|clothing|false
+
+SELECT stores.mall_id, malls.name, malls.location, stores.store_type, stores.location_level
+FROM malls INNER JOIN stores ON stores.mall_id = malls.id;
+1|Bay St.|Emeryville|clothing|1
+2|Union Square|San Francisco|shoes|2
+3|Stoneridge|Pleasanton|accessories|2
+2|Union Square|San Francisco|clothing|5
+
+SELECT malls.name, stores.name, stores.card_only FROM malls, stores WHERE stores.mall_id=mal
+ls.id;
+Bay St.|H&M|false
+Union Square|Footlocker|true
+Stoneridge|Claires|true
+Union Square|Macys|false
+
+
