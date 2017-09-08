@@ -42,8 +42,12 @@ DELETE FROM stores WHERE stores.store_type="belts";
 3|Claires|accessories|2|true|3
 4|Macys|clothing|5|false|2
 
-RELEASE 3:
-	TRY A FEW DIFFERENT JOINS
+RELEASE 3: RESEARCH ON YOUR OWN
+There are lots of different kinds of joins. What are they? Can you apply different conditions to a join to change what's displayed? Can you bookmark any good diagrams that will help you tell different joins apart in the future?
+
+	-	The different kinds of JOINS include: right, left, 			inner, outer, full and self. Some of the JOIN 					conditions are AND, WHERE and ON, these can change 			what is displayed.
+
+Try a few different joins in your database, and record the commands and the output in queries.txt.
 
 SELECT stores.name, malls.name FROM stores JOIN malls ON stores.mall_id = malls.id;
 H&M|Bay St.
