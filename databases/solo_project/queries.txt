@@ -1,0 +1,78 @@
+Run a SQL query for each of the following:
+
+Display the information in one table (either table is fine).
+	SELECT * FROM malls;
+1|Bay St.|Emeryville
+2|Union Square|San Francisco
+3|Stoneridge|Pleasanton
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+
+UPDATE stores SET name="Belts-r-us" WHERE name="Beltsrus";
+5|Belts-r-us|belts|3|true|1
+
+
+Display the information in both tables using one query.
+	SELECT * FROM stores, malls WHERE stores.mall_id = malls.id;
+
+1|H&M|clothing|1|false|1|1|Bay St.|Emeryville
+2|Footlocker|shoes|2|true|2|2|Union Square|San Francisco
+3|Claires|accessories|2|true|3|3|Stoneridge|Pleasanton
+4|Macys|clothing|5|false|2|2|Union Square|San Francisco
+5|Belts-r-us|belts|3|true|1|1|Bay St.|Emeryville
+
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+SELECT stores.name, stores.location_level, malls.name, malls.location FROM stores JOIN malls ON stores.mall_id = malls.id;
+
+H&M|1|Bay St.|Emeryville
+Footlocker|2|Union Square|San Francisco
+Claires|2|Stoneridge|Pleasanton
+Macys|5|Union Square|San Francisco
+Belts-r-us|3|Bay St.|Emeryville
+
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+
+DELETE FROM stores WHERE stores.store_type="belts";
+	SELECT * FROM stores;
+1|H&M|clothing|1|false|1
+2|Footlocker|shoes|2|true|2
+3|Claires|accessories|2|true|3
+4|Macys|clothing|5|false|2
+
+RELEASE 3: RESEARCH ON YOUR OWN
+There are lots of different kinds of joins. What are they? Can you apply different conditions to a join to change what's displayed? Can you bookmark any good diagrams that will help you tell different joins apart in the future?
+
+	-	The different kinds of JOINS include: right, left, 			inner, outer, full and self. Some of the JOIN 					conditions are AND, WHERE and ON, these can change 			what is displayed.
+
+Try a few different joins in your database, and record the commands and the output in queries.txt.
+
+SELECT stores.name, malls.name FROM stores JOIN malls ON stores.mall_id = malls.id;
+H&M|Bay St.
+Footlocker|Union Square
+Claires|Stoneridge
+Macys|Union Square
+
+SELECT malls.name, malls.location, stores.store_type, stores.card_only FROM malls JOIN stores ON stores.mall_id = malls.id;
+Bay St.|Emeryville|clothing|false
+Union Square|San Francisco|shoes|true
+Stoneridge|Pleasanton|accessories|true
+Union Square|San Francisco|clothing|false
+
+SELECT stores.mall_id, malls.name, malls.location, stores.store_type, stores.location_level
+FROM malls INNER JOIN stores ON stores.mall_id = malls.id;
+1|Bay St.|Emeryville|clothing|1
+2|Union Square|San Francisco|shoes|2
+3|Stoneridge|Pleasanton|accessories|2
+2|Union Square|San Francisco|clothing|5
+
+SELECT malls.name, stores.name, stores.card_only FROM malls, stores WHERE stores.mall_id=mal
+ls.id;
+Bay St.|H&M|false
+Union Square|Footlocker|true
+Stoneridge|Claires|true
+Union Square|Macys|false
+
+
