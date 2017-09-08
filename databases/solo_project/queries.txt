@@ -1,0 +1,46 @@
+Run a SQL query for each of the following:
+
+Display the information in one table (either table is fine).
+	SELECT * FROM malls;
+1|Bay St.|Emeryville
+2|Union Square|San Francisco
+3|Stoneridge|Pleasanton
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+
+UPDATE stores SET name="Belts-r-us" WHERE name="Beltsrus";
+5|Belts-r-us|belts|3|true|1
+
+
+Display the information in both tables using one query.
+	SELECT * FROM stores, malls WHERE stores.mall_id = malls.id;
+
+1|H&M|clothing|1|false|1|1|Bay St.|Emeryville
+2|Footlocker|shoes|2|true|2|2|Union Square|San Francisco
+3|Claires|accessories|2|true|3|3|Stoneridge|Pleasanton
+4|Macys|clothing|5|false|2|2|Union Square|San Francisco
+5|Belts-r-us|belts|3|true|1|1|Bay St.|Emeryville
+
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+SELECT stores.name, stores.location_level, malls.name, malls.location FROM stores JOIN malls ON stores.mall_id = malls.id;
+
+H&M|1|Bay St.|Emeryville
+Footlocker|2|Union Square|San Francisco
+Claires|2|Stoneridge|Pleasanton
+Macys|5|Union Square|San Francisco
+Belts-r-us|3|Bay St.|Emeryville
+
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+
+DELETE FROM stores WHERE stores.store_type="belts";
+	SELECT * FROM stores;
+1|H&M|clothing|1|false|1
+2|Footlocker|shoes|2|true|2
+3|Claires|accessories|2|true|3
+4|Macys|clothing|5|false|2
+
+RELEASE 3:
+	TRY A FEW DIFFERENT JOINS
