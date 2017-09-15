@@ -71,10 +71,10 @@ get '/students/:id' do
 end
 
 # Make a route that allows the user to search the database in some way
-get '/students/:name' do
-  student = db.execute("SELECT * FROM students WHERE name=?")
-  student.to_s
-end
+# get '/students/:name' do
+#   student = db.execute("SELECT * FROM students WHERE name=?", [params[:name]])[0]
+#   # student.to_s
+# end
 
 # Is Sinatra the only web app library in Ruby? What are some others?
   # -Other web apps in Ruby include: Padrino, Cramp, Ruby on Rails, Rack, Cuba, Merb etc.
