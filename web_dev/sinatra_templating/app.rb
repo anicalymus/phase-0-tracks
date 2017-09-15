@@ -18,7 +18,6 @@ get '/students/new' do
 end
 
 get '/students/campus' do
-	@students = db.execute("SELECT students.campus FROM students")
 	erb :campuses
 end
 
@@ -29,10 +28,11 @@ post '/students' do
   redirect '/'
 end
 
-# post '/campuses' do
-# 	db.execute("SELECT students.campus FROM students", params['campus'])
+# post '/students' do
+# 	db.execute("INSERT INTO students.campus VALUES (?)", params['campus'])
 # 	redirect '/'
 # end
 
 
 # add static resources
+# @students = db.execute("SELECT students.campus FROM students")
